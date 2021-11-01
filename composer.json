@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PedroSantiago\\SentryApi\\": "SentryApi"
+            "PedroSantiago\\SentryApi\\": "src/"
         }
     },
     "autoload-dev": {

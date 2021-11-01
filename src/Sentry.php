@@ -19,9 +19,14 @@ class Sentry {
         return $this->apiClient()->get("/0/projects/")->throw()->object();
     }
 
-    public function viewProject(string $slug)
+    public function getProject(string $slug)
     {
-        return $this->apiClient()->get("/0/projects/{$this->organization}/{$slug}");
+        return $this->apiClient()->get("/0/projects/{$this->organization}/{$slug}/")->throw()->object();
+    }
+
+    public function getProjectKeys(string $slug)
+    {
+        return $this->apiClient()->get("/0/projects/{$this->organization}/{$slug}/keys/")->throw()->object();
     }
 
     public function createProject(string $team, string $name, string $platform = '')
